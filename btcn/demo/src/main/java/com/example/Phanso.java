@@ -2,18 +2,18 @@ package com.example;
 import java.util.Scanner;
 
 public class Phanso {
-    private int tuso;
-    private int mauso;
+    private int tuso_103;
+    private int mauso_103;
 
     // ham khoi tao ko doi so;
     public Phanso(){
-        tuso=0;
-        mauso=1;
+        tuso_103=0;
+        mauso_103=1;
     }
     //ham khoi tao co doi so
-    public Phanso(int tuso,int mauso){
-        this.tuso=tuso;
-        this.mauso=mauso;
+    public Phanso(int tuso_103,int mauso_103){
+        this.tuso_103=tuso_103;
+        this.mauso_103=mauso_103;
     }
     //nhap phan so
     public void nhapPS(Scanner sc){
@@ -28,8 +28,8 @@ public class Phanso {
                 System.out.println("\t Ban nhap sai");
             }
             else{
-                tuso=a;
-                mauso=b;
+                tuso_103=a;
+                mauso_103=b;
             }
 
         }while(b==0);
@@ -37,34 +37,34 @@ public class Phanso {
     }
     // hien thi phan so
     public void hienthiPs(){
-        if(tuso*mauso<0){
-            System.out.println("\t-"+Math.abs(tuso)+"/"+Math.abs(mauso));
+        if(tuso_103*mauso_103<0){
+            System.out.println("\t-"+Math.abs(tuso_103)+"/"+Math.abs(mauso_103));
         }
-        else System.out.println("\t"+Math.abs(tuso)+"/"+Math.abs(mauso));
+        else System.out.println("\t"+Math.abs(tuso_103)+"/"+Math.abs(mauso_103));
     }
     //Cong 2 phan so
     //ps2 se thua huong cac thuoc tinh cuar Phanso
     public Phanso congPs(Phanso ps2){
-        int a=tuso*ps2.mauso+ps2.tuso*mauso;
-        int b=mauso*ps2.mauso;
+        int a=tuso_103*ps2.mauso_103+ps2.tuso_103*mauso_103;
+        int b=mauso_103*ps2.mauso_103;
         return new Phanso(a,b);
     }
     //tru 2 phan so
     public Phanso truPs(Phanso ps2){
-        int a=tuso*ps2.mauso-ps2.tuso*mauso;
-        int b=mauso*ps2.mauso;
+        int a=tuso_103*ps2.mauso_103-ps2.tuso_103*mauso_103;
+        int b=mauso_103*ps2.mauso_103;
         return new Phanso(a,b);
     }
     //nhan 2 phan so
     public Phanso nhanPs(Phanso ps2){
-        int a=tuso*ps2.tuso;
-        int b=mauso*ps2.mauso;
+        int a=tuso_103*ps2.tuso_103;
+        int b=mauso_103*ps2.mauso_103;
         return new Phanso(a,b);
     }
     //chia 2 phan so
     public Phanso chiaPs(Phanso ps2){
-        int a=tuso*ps2.mauso;
-        int b=mauso*ps2.tuso;
+        int a=tuso_103*ps2.mauso_103;
+        int b=mauso_103*ps2.tuso_103;
         return new Phanso(a,b);
     }
     // kiem tra ve uoc chung lon nhat
@@ -80,16 +80,16 @@ public class Phanso {
     }
     // ham kiem tra toi gian
     public boolean kiemtra(){
-        if(Timuscln(tuso,mauso)==1){
+        if(Timuscln(tuso_103,mauso_103)==1){
             return true;
         }
         return false;
     }
     // ham phan so toi gian
     public void toigian(){
-        int x=Timuscln(tuso,mauso);
-        tuso/=x;
-        mauso/=x;
+        int x=Timuscln(tuso_103,mauso_103);
+        tuso_103/=x;
+        mauso_103/=x;
     }
 }
 
